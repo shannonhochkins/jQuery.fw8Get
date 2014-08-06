@@ -36,11 +36,11 @@ Options
 | subTemplate           | string                                | The subtemplate of the reference. |
 | tags                  | string                                | Get the references by tags |
 | loadingHTML           | string                                | The default html used to add to the container. |
-| custom                | string                                | A custom url format option. See example at the bottom for more information. |
+| custom                | string                                | A custom url format option. See [example][0] at the bottom for more information. |
 | onSuccess             | function() {elem, data, plugin}       | Callback if the ajax call was successful. |
 | onError               | function() {elem, data, plugin}       | Callback if the ajax call failed. |
 
-
+[0]: #get-listings---available-options
 
 ## How to get module content
 ===============

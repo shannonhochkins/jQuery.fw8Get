@@ -106,7 +106,7 @@
 						break;
 					case "blocks":
 						// {template_block, reference}
-						this.settings.p1 = this.settings.module;
+						this.settings.p1 = 'template_block';
 						this.settings.p2 = this.settings.reference;
 						this.settings.url = this.module.generic(this, this.settings);
 						break;
