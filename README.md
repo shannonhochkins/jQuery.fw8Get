@@ -36,7 +36,7 @@ Options
 | subTemplate           | string                                | The subtemplate of the reference. |
 | tags                  | string                                | Get the references by tags |
 | loadingHTML           | string                                | The default html used to add to the container. |
-| custom                | string                                | A custom url format option. The module also has to be set to 'custom'. |
+| custom                | string                                | A custom url format option. See example at the bottom for more information. |
 | onSuccess             | function() {elem, data, plugin}       | Callback if the ajax call was successful. |
 | onError               | function() {elem, data, plugin}       | Callback if the ajax call failed. |
 
@@ -134,13 +134,17 @@ $('.element').fw8Get({
 });
 ```
 
-##### Getting custom content or creating your own URL format to request custom content from any allowed module.
+##### Getting Custom Content
 ---------------
+
+
+The standard available options are available here too, however module, type, reference, tags & subtemplate are all overwritten as you're creating your own custom url.
+This was added as a means to get any data, but not be restricted by the limitations of this plugin.
+
 
 ```javascript
 
 $('.element').fw8Get({
-    module: 'custom',
     custom: 'menu, menuname'
     // The actual request will look like this: /_get/json/menu,menuname
 });

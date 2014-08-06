@@ -58,9 +58,11 @@
 
 			// Fill the container with a loading attribute
 			container.html(this.settings.loadingHTML);
-
-			if (this.settings.module != '') {
-				switch (this.settings.module) {
+			// Overwrite the module of the custom flag is not empty.
+			var switchType = (this.settings.custom == '' ? this.settings.module : 'custom');
+			// Look for the module that we're trying to get content for
+			if (switchType != '') {
+				switch (switchType) {
 					case "productsByTag":
 						// {store, productsByTag, tag(s), subTemplate}
 						this.settings.p1 = 'store';
