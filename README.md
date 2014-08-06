@@ -6,19 +6,19 @@ Repository for framework automating the ajax calls for modules.
 ### Index
 --------------
 
-```
-[Usage][0]
-[Options][1]
-[How To][2]
-// Modules
-[Get Products By Tag][3]
-[Get Blogs By Tag][4]
-[Get Gallery][5]
-[Get Listings][6]
-[Get Template Block][7]
-[Get Category][8]
-[Get Custom Content][9]
-```
+- General
+-   [Usage][0]
+-   [Options][1]
+-   [How To][2]
+- Modules
+-   [Get Products By Tag][3]
+-   [Get Blogs By Tag][4]
+-   [Get Gallery][5]
+-   [Get Listings][6]
+-   [Get Template Block][7]
+-   [Get Category][8]
+-   [Get Custom Content][9]
+
 
 [0]: #usage
 [1]: #options
