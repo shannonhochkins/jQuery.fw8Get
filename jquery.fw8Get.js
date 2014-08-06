@@ -15,13 +15,14 @@
 	// Create the defaults once
 	var pluginName = "fw8Get";
 	var defaults = {
-		requestType: "GET",
+		format: 'json',
 		module: '',
 		reference: '',
 		type: '',
 		subTemplate: '',
 		tags: '',
 		loadingHTML: '<div class="sprite loading"></div>',
+		custom: '',
 		onSuccess: null,
 		onError: null,
 	};
@@ -119,7 +120,10 @@
 						this.settings.p2 = this.settings.subTemplate;
 						this.settings.url = this.module.generic(this, this.settings);
 						break;
-
+					case "custom":
+						this.settings.p1 = this.settings.custom;
+						this.settings.url = this.module.generic(this, this.settings);
+						break;
 					default:
 						this.settings.url = false;
 						break;
@@ -154,31 +158,15 @@
 			}
 		},
 		module: {
-			base: '/_get/json/',
-			blogsByTag: function(self, settings) {
-				var sub = self.returnFlag(self.settings.subTemplate);
-				return self.module.base + 'blog,' + self.settings.reference + ',tags,' + self.settings.tags + sub;
-			},
-			productsByTag: function(self, settings) {
-				var sub = self.returnFlag(self.settings.subTemplate);
-				var module = self.returnFlag(self.settings.module);
-				var tags = self.returnFlag(self.settings.tags);
-				return self.module.base + 'store' + module + tags + sub;
-			},
-			listings: function(self, settings) {
-				var sub = self.returnFlag(settings.subTemplate);
-				var type = self.returnFlag(settings.type);
-				return self.module.base + 'listing,' + self.settings.reference + type + sub;
-			},
+			base: '/_get/',
 			generic: function(self, settings) {
 				var p1 = self.returnFlag(settings.p1, false);
 				var p2 = self.returnFlag(settings.p2);
 				var p3 = self.returnFlag(settings.p3);
 				var p4 = self.returnFlag(settings.p4);
 				var p5 = self.returnFlag(settings.p5);
-				return self.module.base + p1 + p2 + p3 + p4 + p5;
+				return self.module.base + self.settings.format + '/' + p1 + p2 + p3 + p4 + p5;
 			}
-
 		},
 		returnFlag: function(value, prependComma) {
 			// If it's defined && not null && the value is not an empty string, return a comma and the string value

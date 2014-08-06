@@ -10,6 +10,7 @@ Usage
 
 ```javascript
 $('.element').fw8Get({
+    format: 'json',
     module: '',
     reference: '',
     type: '',
@@ -28,12 +29,14 @@ Options
 
 | Options         | Type                                        | Description |
 | ------------- |:-------------:|:-----|
+| format                | string                                | The main format of the request |
 | module                | string                                | The module name |
 | reference             | string                                | The reference name of an item in the module. |
 | type                  | string                                | The type of the reference. |
 | subTemplate           | string                                | The subtemplate of the reference. |
 | tags                  | string                                | Get the references by tags |
 | loadingHTML           | string                                | The default html used to add to the container. |
+| custom                | string                                | A custom url format option. The module also has to be set to 'custom'. |
 | onSuccess             | function() {elem, data, plugin}       | Callback if the ajax call was successful. |
 | onError               | function() {elem, data, plugin}       | Callback if the ajax call failed. |
 
@@ -47,8 +50,9 @@ All Modules have the following options, some modules don't allow certain paramet
 ```javascript
 
 $('.element').fw8Get({
-    module: '',
-    loadingHTML: '',
+    format: 'json',
+    module: 'moduleName',
+    loadingHTML: 'loading...',
     onSuccess: null,
     onError: null,
 }); 
@@ -130,7 +134,17 @@ $('.element').fw8Get({
 });
 ```
 
+##### Getting custom content or creating your own URL format to request custom content from any allowed module.
+---------------
 
+```javascript
+
+$('.element').fw8Get({
+    module: 'custom',
+    custom: 'menu, menuname'
+    // The actual request will look like this: /_get/json/menu,menuname
+});
+```
 
 
 
