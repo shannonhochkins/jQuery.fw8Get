@@ -3,7 +3,33 @@ jQuery - fw8Get
 
 Repository for framework automating the ajax calls for modules.
 
+### Index
+--------------
 
+```
+[Usage][0]
+[Options][1]
+[How To][2]
+// Modules
+[Get Products By Tag][3]
+[Get Blogs By Tag][4]
+[Get Gallery][5]
+[Get Listings][6]
+[Get Template Block][7]
+[Get Category][8]
+[Get Custom Content][9]
+```
+
+[0]: #usage
+[1]: #options
+[2]: #how-to-get-module-content
+[3]: #get-products-by-tag---available-options
+[4]: #get-blogs-by-tag---available-options
+[5]: #get-gallery---available-options
+[6]: #get-listings---available-options
+[7]: #get-template-block---available-options
+[8]: #get-category---available-options
+[9]: #getting-custom-content
 
 Usage
 --------------
@@ -36,11 +62,16 @@ Options
 | subTemplate           | string                                | The subtemplate of the reference. |
 | tags                  | string                                | Get the references by tags |
 | loadingHTML           | string                                | The default html used to add to the container. |
-| custom                | string                                | A custom url format option. See [example][0] at the bottom for more information. |
+| custom                | string                                | A custom url format option. See [example][10] at the bottom for more information. |
 | onSuccess             | function() {elem, data, plugin}       | Callback if the ajax call was successful. |
 | onError               | function() {elem, data, plugin}       | Callback if the ajax call failed. |
 
-[0]: #get-listings---available-options
+[10]: #getting-custom-content
+
+
+
+
+
 
 ## How to get module content
 ===============
