@@ -1,7 +1,7 @@
-fw8Get
+jQuery - fw8Get
 ===============
 
-This plugin is built for framework, it takes advantage of ajax and makes the process a whole lot more simple.
+Repository for framework automating the ajax calls for modules.
 
 
 
@@ -26,8 +26,8 @@ Options
 --------------
 
 
-| Options         | Type                                        | Description  |
-| ------------- |:-------------:| -----:|
+| Options         | Type                                        | Description |
+| ------------- |:-------------:|:-----|
 | module                | string                                | The module name |
 | reference             | string                                | The reference name of an item in the module. |
 | type                  | string                                | The type of the reference. |
@@ -38,16 +38,11 @@ Options
 | onError               | function() {elem, data, plugin}       | Callback if the ajax call failed. |
 
 
-Url Formats
---------------
 
-So far I believe I cover the following url formats that can be parsed to the urlOrID option. It may handle more than this! :)
-
-
-How to get module content
+## How to get module content
 ===============
 
-All Modules have the following options working for everything.
+All Modules have the following options, some modules don't allow certain parameters but these are allowed in all.
 
 ```javascript
 
@@ -59,8 +54,10 @@ $('.element').fw8Get({
 }); 
 ```
 
+Not all modules are set up yet, but here's a list of the available modules currently setup with fw8Get
 
-Get Products By Tag - Available Options
+
+##### Get Products By Tag - Available Options
 ---------------
 
 ```javascript
@@ -72,7 +69,7 @@ $('.element').fw8Get({
 });
 ```
 
-Get Blogs By Tag - Available Options
+##### Get Blogs By Tag - Available Options
 ---------------
 
 ```javascript
@@ -85,7 +82,7 @@ $('.element').fw8Get({
 });
 ```
 
-Get Gallery - Available Options
+##### Get Gallery - Available Options
 ---------------
 
 ```javascript
@@ -97,7 +94,7 @@ $('.element').fw8Get({
 });
 ```
 
-Get Listings - Available Options
+##### Get Listings - Available Options
 ---------------
 
 ```javascript
@@ -110,7 +107,7 @@ $('.element').fw8Get({
 });
 ```
 
-Get Template Block - Available Options
+##### Get Template Block - Available Options
 ---------------
 
 ```javascript
@@ -121,7 +118,7 @@ $('.element').fw8Get({
 });
 ```
 
-Get Category - Available Options
+##### Get Category - Available Options
 ---------------
 
 ```javascript
